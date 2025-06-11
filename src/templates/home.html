@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.py"></script>
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-    <title>Sistema de Monitoramento de Sustentabilidade Pessoal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
+  <title>Sustentabilidade Pessoal</title>
 </head>
 <body>
-    
+  <h1>Monitoramento de Sustentabilidade</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form action="{{ url_for('inserir_dados') }}" method="POST">
+    <input type="text" name="usuario" placeholder="Nome" required>
+    <input type="date" name="data" required>
+    <input type="number" name="agua" placeholder="Água (L)" step="0.01" required>
+    <input type="number" name="energia" placeholder="Energia (kWh)" step="0.01" required>
+    <input type="number" name="residuos" placeholder="Resíduos (kg)" step="0.01" required>
+    <input type="number" name="reciclado" placeholder="Reciclado (%)" min="0" max="100" required>
+    <select name="transporte" required>
+      <option value="">Selecione o transporte</option>
+      <option value="Transporte público">Transporte público</option>
+      <option value="Bicicleta">Bicicleta</option>
+      <option value="Caminhada">Caminhada</option>
+      <option value="Carro (combustível fóssil)">Carro (combustível fóssil)</option>
+      <option value="Carro elétrico">Carro elétrico</option>
+      <option value="Carona compartilhada">Carona compartilhada</option>
+    </select>
+    <button type="submit">Salvar</button>
+  </form>
 </body>
 </html>
