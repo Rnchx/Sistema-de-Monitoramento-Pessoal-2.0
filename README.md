@@ -43,9 +43,9 @@ This system is still under development, and new features will be added soon.
 
 ## 🛠️ Tecnologias | Technologies
 
-- Frontend: *(defina aqui, ex: React, HTML/CSS, etc.)*
-- Backend: *(ex: Node.js, Python, etc.)*
-- Banco de Dados: *(ex: MySQL, MongoDB, etc.)*
+- Frontend: **HTML/CSS, Python**
+- Backend: **Python**
+- Banco de Dados: **MySQL**
 
 ---
 
