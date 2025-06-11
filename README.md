@@ -55,6 +55,7 @@ Desenvolvido por **Rnchx**
 Developed by **Rnchx**
 
 Todos os direitos reservados. Proibida a reprodução total ou parcial sem autorização.
+All rights reserved. Reproduction in whole or in part without permission is prohibited.
 
 ---
 
