@@ -30,7 +30,7 @@ In this **version 2.0**, users will benefit from **improved screen layouts**, fo
 ---
 
 ## 📸 Capturas de Tela | Screenshots  
-(Em breve)
+(Em breve | Coming soon)
 
 ---
 
